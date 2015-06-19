@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/ic_camera_logo" />
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_option"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_below="@+id/imageView"
+        android:background="@color/bg_photo_option">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:src="@drawable/ic_camera_back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="shareFriend"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_camera_share_friend" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:onClick="shareMore"
+            android:src="@drawable/ic_camera_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_haze"
+        style="@style/rectangle_gray_bg"
+        android:layout_width="fill_parent"
+
+        android:layout_above="@id/rl_photo_option"
+        android:layout_height="@dimen/height_haze"
+        android:layout_marginBottom="@dimen/margin_bottom_haze"
+        android:alpha="0.4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginLeft="10dp">
+
+
+            <TextView
+                android:id="@+id/tv_haze_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawableLeft="@drawable/ic_camera_pm25"
+
+                android:drawablePadding="6dp"
+
+                android:textColor="#FFF"
+                android:textSize="@dimen/text_size_14" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@+id/tv_haze_desc">
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif-thin"
+
+                    android:gravity="left"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_14" />
+                <ImageView
+                    android:id="@+id/iv_address_mark"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_address"
+                    android:src="@drawable/ic_camer_mark"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:layout_toLeftOf="@+id/tv_address"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_haze_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_haze_desc"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="left"
+
+                android:textColor="#FFF"
+                android:textSize="@dimen/text_size_64" />
+
+            <TextView
+                android:id="@+id/tv_haze_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="5dp"
+                android:layout_alignBaseline="@+id/tv_haze_value"
+
+                android:layout_toRightOf="@+id/tv_haze_value"
+                android:gravity="bottom"
+                android:text="@string/haze_unit"
+                android:textColor="#FFF"
+                android:textSize="@dimen/text_size_16" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_pm25"
+
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:gravity="right"
+                android:textColor="#FFF"
+
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_data_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_pm25"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:gravity="right"
+                android:text="@string/data_from"
+                android:textColor="#FFF"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

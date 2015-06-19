@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.airburg.emo"
+	android:versionCode="100"
+	android:versionName="1.0.0">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+
+
+	<!-- 保持屏幕常亮锁 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<!-- 用来访问网络 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- 写入外部存储设备 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- 用于调用 JNI -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+
+
+	<uses-sdk android:minSdkVersion="18" />
+
+    <application android:name=".SelfApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+	    <!--扉页activity-->
+	    <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+
+		    android:theme="@style/SplashTransparent">
+		    <intent-filter>
+			    <action android:name="android.intent.action.MAIN" />
+			    <category android:name="android.intent.category.LAUNCHER" />
+		    </intent-filter>
+	    </activity>
+
+		<!--主activity-->
+        <activity android:name=".activity.MainActivity"
+			android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+	    <!--&lt;!&ndash;分享Activity&ndash;&gt;-->
+        <!--<activity android:name=".activity.ShareActivity" android:theme="@style/SelfTransparent">-->
+
+	    <!--</activity>-->
+	    <!--&lt;!&ndash;信息Activity&ndash;&gt;-->
+        <!--<activity android:name=".activity.CaptionActivity" android:theme="@style/SelfTransparent"/>-->
+
+	    <!--接受微博回调Activity-->
+	    <activity android:name=".wbapi.WBEntryActivity"
+	              android:theme="@style/SelfTransparent">
+		    <intent-filter>
+			    <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+			    <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+	    </activity>
+
+	    <!--接受微信应用回调activity-->
+	    <activity android:name=".wxapi.WXEntryActivity"
+	              android:theme="@style/SelfTransparent"
+	              android:exported="true"/>
+
+
+	    <!-- 必须注册在微博授权，分享微博时候用到 -->
+	    <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+                android:screenOrientation="portrait"
+	            android:configChanges="keyboardHidden|orientation"
+	            android:windowSoftInputMode="adjustResize"
+	            android:exported="false" >
+	    </activity>
+
+	    <service android:name="com.sina.weibo.sdk.net.DownloadService"
+	             android:exported="false"></service>
+
+        <service android:name=".service.BluetoothLeService" android:enabled="true" />
+
+
+	    <!--友盟自动更新集成-->
+	    <activity
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+	    </activity>
+
+		<activity
+			android:name=".activity.PhotoActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+
+	    <service
+		    android:name="com.umeng.update.net.DownloadingService"
+		    android:process=":DownloadingService" >
+	    </service>
+
+		<activity
+			android:name="com.tencent.tauth.AuthActivity"
+			android:noHistory="true"
+			android:launchMode="singleTask" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="tencent1104671506" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.tencent.connect.common.AssistActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			/>
+
+		<service
+			android:name="com.baidu.location.f"
+			android:enabled="true"
+			android:process=":remote" >
+			<intent-filter>
+				<action android:name="com.baidu.location.service_v2.2" >
+				</action>
+			</intent-filter>
+		</service>
+
+		<!-- meta-data需要写在application中 -->
+		<meta-data
+			android:name="com.baidu.lbsapi.API_KEY"
+			android:value="84Xtl5ZXT0zwXm3mmrDzS2uk" />
+
+	    <meta-data android:name="UMENG_APPKEY" android:value="54f3c555fd98c5d445000766"/>
+	    <meta-data android:name="UMENG_CHANNEL" android:value="Channel ID" />
+    </application>
+
+</manifest>

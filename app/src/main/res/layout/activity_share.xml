@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center_horizontal|bottom"
+    android:layout_height="match_parent">
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal|center_vertical">-->
+        <!--&lt;!&ndash; 微信 &ndash;&gt;-->
+        <!--<ImageButton android:id="@+id/btnShareWeixin"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/botton_share_wechat"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="微信"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="16dp"-->
+            <!--android:textIsSelectable="false" />-->
+        <!---->
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="20dp"/>-->
+        <!--&lt;!&ndash; 微信朋友圈 &ndash;&gt;-->
+        <!--<ImageButton android:id="@+id/btnShareWeixinFriend"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/botton_share_friend"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="朋友圈"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="16dp"-->
+            <!--android:textIsSelectable="false" />-->
+
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="20dp"/>-->
+
+        <!--&lt;!&ndash; 微博 &ndash;&gt;-->
+        <!--<ImageButton android:id="@+id/btnShareWeibo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/botton_share_weibo"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="微博"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="16dp"-->
+            <!--android:textIsSelectable="false" />-->
+
+   <!--</LinearLayout>-->
+
+	<LinearLayout android:id="@+id/layoutShare"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal|center_vertical"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"
+		android:background="#FAFAFA">
+		<!--微信-->
+		<LinearLayout android:id="@+id/btnShareWeixin"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:gravity="center_vertical|left"
+			android:orientation="horizontal">
+			<View
+				android:layout_width="16dp"
+				android:layout_height="0dp"/>
+
+			<ImageButton
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:alpha="0.5"
+				android:background="@drawable/icon_share_wechat"/>
+
+			<View
+				android:layout_width="32dp"
+				android:layout_height="0dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_size_16_sp"
+				android:textColor="#777"
+				android:text="微信"/>
+		</LinearLayout>
+
+		<!--朋友圈-->
+		<LinearLayout android:id="@+id/btnShareWeixinFriend"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+			<View
+				android:layout_width="16dp"
+				android:layout_height="0dp"/>
+
+			<ImageButton
+			             android:layout_width="24dp"
+			             android:layout_height="24dp"
+			             android:alpha="0.5"
+			             android:background="@drawable/icon_share_library"/>
+
+			<View
+				android:layout_width="32dp"
+				android:layout_height="0dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_size_16_sp"
+				android:textColor="#777"
+				android:text="朋友圈"/>
+		</LinearLayout>
+
+		<!--微博-->
+		<LinearLayout android:id="@+id/btnShareWeibo"
+			android:layout_width="match_parent"
+		    android:layout_height="48dp"
+		    android:gravity="center_vertical|left"
+		    android:orientation="horizontal">
+			<View
+				android:layout_width="16dp"
+				android:layout_height="0dp"/>
+
+			<ImageButton
+			             android:layout_width="24dp"
+			             android:layout_height="24dp"
+			             android:alpha="0.5"
+			             android:background="@drawable/icon_share_weibo"/>
+
+			<View
+				android:layout_width="32dp"
+				android:layout_height="0dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_size_16_sp"
+				android:textColor="#777"
+				android:text="微博"/>
+		</LinearLayout>
+
+
+		<!--微信-->
+		<LinearLayout android:id="@+id/btnShareQQ"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:gravity="center_vertical|left"
+			android:orientation="horizontal">
+			<View
+				android:layout_width="16dp"
+				android:layout_height="0dp"/>
+
+			<ImageButton
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:alpha="0.5"
+				android:background="@drawable/icon_share_qq"/>
+
+			<View
+				android:layout_width="32dp"
+				android:layout_height="0dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_size_16_sp"
+				android:textColor="#777"
+				android:text="QQ"/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

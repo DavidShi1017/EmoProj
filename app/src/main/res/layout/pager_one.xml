@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <View android:id="@+id/layoutAnimPageOneForeground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/blue">
+    </View>
+
+	<!--内容-->
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+	    android:background="#00000000">
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            >
+            <!--分享按钮-->
+            <ImageButton
+                android:id="@+id/btnPagerOneShare"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_icon_share"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true" />
+            <ImageButton
+                android:id="@+id/btnPagerOneShare_disabled"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_icon_share_disabled"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+            <!--info 按钮-->
+            <ImageButton
+                android:id="@+id/btnPagerOneCaption"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toolbar_icon_caption"
+                android:layout_toLeftOf="@id/btnPagerOneShare"
+
+                android:layout_marginRight="24dp"/>
+
+
+            <ImageButton
+                android:id="@+id/btnPagerOneCamera"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_camera"
+                android:visibility="invisible"
+                android:layout_toLeftOf="@id/btnPagerOneCaption"
+                android:layout_marginRight="24dp"/>
+            <ImageButton
+                android:id="@+id/btnPagerOneCamera_disabled"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_camera_disabled"
+                android:layout_toLeftOf="@id/btnPagerOneCaption"
+                android:layout_marginRight="24dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPagerOnePM2dot5Value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-thin"
+                    android:textSize="@dimen/text_size_110_sp"
+                    android:text="--"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="@dimen/text_size_16_sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="@color/white"
+                    android:text="@string/haze_unit"/>
+            </RelativeLayout>
+
+
+			<!--空气质量（雾霾）文字描述-->
+            <FrameLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal">
+	            <TextView
+		            android:id="@+id/tvPagerOneHazeValueForeDesc"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_16_sp"
+                    android:textColor="#FFF"
+		            android:alpha="0.6"
+		            android:text="- -"/>
+
+	            <TextView
+		            android:id="@+id/tvPagerOneHazeValueBackDesc"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+                    android:gravity="center"
+		            android:textSize="@dimen/text_size_16_sp"
+		            android:textColor="#FFF"
+		            android:alpha="0.6"
+		            android:text="- -"/>
+	        </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <TextView android:id="@+id/tvPagerOneBatteryWarn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textColor="#FFF"
+                android:alpha="0.6"
+                android:text="@string/pageone_battery_warn"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout android:id="@+id/layoutPagerOneBatteryText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="140dp"
+                style="@style/rectangle_gray_bg"
+                android:alpha="0.3"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/tvPagerOneBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remain_battery"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="#FFF"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="80dp">
+
+                <LinearLayout android:id="@+id/layoutPageOneBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:background="@drawable/battery_bg">
+
+                    <ProgressBar android:id="@+id/progressPageOneBattery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/battery_progress"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>
+

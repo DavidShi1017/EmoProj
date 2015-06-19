@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center_horizontal|bottom"
+    android:layout_height="match_parent">
+
+	<LinearLayout android:id="@+id/layoutInfo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FAFAFA"
+		android:orientation="vertical">
+		
+		<View
+			android:layout_width="0dp"
+			android:layout_height="16dp"/>
+		<!--第一排-->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="24dp"
+			android:layout_marginLeft="24dp"
+			android:orientation="horizontal">
+
+			<!--左侧-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|left"
+				android:orientation="vertical">
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:gravity="center_horizontal|bottom"
+					android:orientation="vertical">
+
+					<!--说明图例-->
+					<TextView
+						style="@style/caption_circle_info_image"
+						android:background="@drawable/circle_info_bg_1"
+						android:text="0 - 35"/>
+					<!--说明文字-->
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/caption_circle_info_text"
+						android:text="良好"/>
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<!--中间-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|center_horizontal"
+				android:orientation="vertical">
+
+				<!--说明图例-->
+				<TextView
+					style="@style/caption_circle_info_image"
+					android:background="@drawable/circle_info_bg_2"
+					android:text="36 - 75"/>
+				<!--说明文字-->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/caption_circle_info_text"
+					android:text="正常"/>
+
+			</LinearLayout>
+
+			<!--右侧-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|right"
+				android:orientation="vertical">
+				<LinearLayout android:layout_width="wrap_content"
+				              android:layout_height="match_parent"
+				              android:gravity="center_horizontal|bottom"
+				              android:orientation="vertical">
+
+					<!--说明图例-->
+					<TextView
+						style="@style/caption_circle_info_image"
+						android:background="@drawable/circle_info_bg_3"
+						android:text="76 - 115"/>
+					<!--说明文字-->
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/caption_circle_info_text"
+						android:text="轻度污染"/>
+				</LinearLayout>
+
+			</LinearLayout>
+		</LinearLayout>
+
+		<!--第二排-->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="24dp"
+			android:layout_marginLeft="24dp"
+			android:orientation="horizontal">
+
+			<!--左侧-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|left"
+				android:orientation="vertical">
+				<LinearLayout android:layout_width="wrap_content"
+				              android:layout_height="match_parent"
+				              android:gravity="center_horizontal|bottom"
+				              android:orientation="vertical">
+
+					<!--说明图例-->
+					<TextView
+						style="@style/caption_circle_info_image"
+						android:background="@drawable/circle_info_bg_4"
+						android:text="116 - 150"/>
+					<!--说明文字-->
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/caption_circle_info_text"
+						android:text="中度污染"/>
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<!--中间-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|center_horizontal"
+				android:orientation="vertical">
+
+				<!--说明图例-->
+				<TextView
+					style="@style/caption_circle_info_image"
+					android:background="@drawable/circle_info_bg_5"
+					android:text="151 - 250"/>
+				<!--说明文字-->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/caption_circle_info_text"
+					android:text="重度污染"/>
+
+			</LinearLayout>
+
+			<!--右侧-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|right"
+				android:orientation="vertical">
+				<LinearLayout android:layout_width="wrap_content"
+				              android:layout_height="match_parent"
+				              android:gravity="center_horizontal|bottom"
+				              android:orientation="vertical">
+
+					<!--说明图例-->
+					<TextView
+						style="@style/caption_circle_info_image"
+						android:background="@drawable/circle_info_bg_6"
+						android:text="251 - 350"/>
+					<!--说明文字-->
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/caption_circle_info_text"
+						android:text="严重污染"/>
+				</LinearLayout>
+
+			</LinearLayout>
+		</LinearLayout>
+
+		<!--第三排-->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="24dp"
+			android:layout_marginLeft="24dp"
+			android:orientation="horizontal">
+
+			<!--中间-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_weight="1"
+				android:gravity="bottom|center_horizontal"
+				android:orientation="vertical">
+
+				<!--说明图例-->
+				<TextView
+					style="@style/caption_circle_info_image"
+					android:background="@drawable/circle_info_bg_7"
+					android:text="351以上"/>
+				<!--说明文字-->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/caption_circle_info_text"
+					android:text="不宜人类生存"/>
+
+			</LinearLayout>
+		</LinearLayout>
+		
+		<View
+			android:layout_width="0dp"
+			android:layout_height="24dp"/>
+
+	</LinearLayout>
+
+</LinearLayout>
